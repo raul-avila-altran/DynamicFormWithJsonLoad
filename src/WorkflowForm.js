@@ -36,7 +36,6 @@ const data = {
 const options = ["check_policy_status_not", "singleParameter", "withClaims", "type", "check_policy_status", "DRAFT_CERTIFICATE", "PAYMENT_MANAGED_BY_AXA", "IDD_COMPLIANT"];
 
 
-
 let WorkflowForm = props => {
   const { handleSubmit, load, pristine, reset, submitting } = props;
   return (

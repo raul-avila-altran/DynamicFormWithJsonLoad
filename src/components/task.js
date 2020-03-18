@@ -4,7 +4,7 @@ import React from "react";
 import { Field, FieldArray } from "redux-form";
 import renderDependancy from "./dependancy";
 
-const renderTask = ({ fields, meta: { touched, error, submitFailed } }) => (
+const renderTask = ({ member ,fields, meta: { touched, error, submitFailed } }) => (
   <ul>
     <li>
       <button type="button" onClick={() => fields.push({})}>
