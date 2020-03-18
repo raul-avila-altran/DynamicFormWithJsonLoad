@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Field, FieldArray, reduxForm } from "redux-form";
+import { Field, FieldArray, reduxForm, Fields } from "redux-form";
 import { load as loadAccount } from "./account";
 const data = {
   // used to populate "workflow" reducer when "Load" is clicked
@@ -108,9 +108,100 @@ const renderTask = ({ fields, meta: { touched, error, submitFailed } }) => (
         </div>
       </div>  
       <div>
-      <FieldArray name={`${task}.options`} component={renderOptions} />
+        <label>check_policy_status_not</label>
 
-      </div>
+        <div>
+          <Field
+            name={`${task}.options.check_policy_status_not`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>singleParameter</label>
+
+        <div>
+          <Field
+            name={`${task}.options.singleParameter`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>type</label>
+
+        <div>
+          <Field
+            name={`${task}.options.type`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>check_policy_status</label>
+
+        <div>
+          <Field
+            name={`${task}.options.check_policy_status`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>DRAFT_CERTIFICATE</label>
+
+        <div>
+          <Field
+            name={`${task}.options.DRAFT_CERTIFICATE`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>withClaims</label>
+
+        <div>
+          <Field
+            name={`${task}.options.withClaims`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>PAYMENT_MANAGED_BY_AXA</label>
+        <div>
+          <Field
+            name={`${task}.options.PAYMENT_MANAGED_BY_AXA`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
+      <div>
+        <label>IDD_COMPLIANT</label>
+
+        <div>
+          <Field
+            name={`${task}.options.IDD_COMPLIANT`}
+            component="input"
+            type="text"
+            placeholder=""
+          />
+        </div>
+      </div>  
       <FieldArray name={`${task}.dependsOn`} component={renderDependancy} />
 
         {/* <FieldArray name={`${task}.dependsOn`} component={renderDependancy} /> */}
@@ -154,22 +245,12 @@ const renderOptions = ({ fields, meta: { error } }) => (
   <ul>
     <li>
      <button type="button" onClick={() => fields.push({})}>
-        Add Task
+        Add Option
       </button>
     </li>
-    {options.map((option, index) => (
+    {fields.map((field, index) => (
       <li key={index}>
-        <div>
-        <label>{`${fields.name}`}.{option}</label>
-        <div>
-          <Field
-            name={option}
-            component="input"
-            type="text"
-            placeholder={option}
-          />
-        </div>
-      </div>  
+        
       </li>
     ))}
     {error && <li className="error">{error}</li>}
