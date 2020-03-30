@@ -4,7 +4,7 @@ import { Field} from "redux-form";
 const renderDependancy = ({ fields, meta: { error } }) => (
   <ul>
     <li>
-      <button type="button" onClick={() => fields.push()}>
+      <button disabled={fields.length > 0} type="button" onClick={() => fields.push()}>
         Add Dependancy
       </button>
     </li>

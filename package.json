@@ -1,15 +1,21 @@
 {
-  "name": "redux-form-initialize-from-state",
+  "name": "workflowrender",
   "version": "0.0.0",
-  "description": "Initialization From State Example using Redux Form",
+  "description": "",
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
+    "array-move": "2.2.1",
+    "file-saver": "2.0.2",
+    "material-ui": "0.20.2",
+    "react": "16.10.0",
+    "react-dom": "16.10.0",
+    "react-dropzone": "10.2.1",
     "react-redux": "5.0.7",
+    "react-widgets": "4.5.0",
     "redux": "4.0.0",
     "redux-form": "7.4.1",
+    "redux-form-material-ui": "4.3.4",
     "redux-form-website-template": "0.0.41"
   },
   "devDependencies": {
